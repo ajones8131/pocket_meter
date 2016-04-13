@@ -1,0 +1,39 @@
+$header-height: 50px;
+
+header{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: header-height;
+  background-color: #7FDCFF;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.12);
+  z-index: 100;
+}
+
+
+button{
+  background-color: #4CAF50;
+  border: 1px;
+  border-color: #347936;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 3px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.12);
+  user-select: none;
+  transition: 0.4s;
+}
+
+button:hover{
+  background-color: #4CAF50;
+  color: white;
+}
+
+button.comment{
+  padding: 7px 20px;
+  // padding-left: 35px;
+  font-size: 15px;
+  float: right;
+  margin-top: 11px;
+  margin-left: 15px;
+}
