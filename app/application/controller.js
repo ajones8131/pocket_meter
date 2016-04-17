@@ -1,5 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  appName: "Pocket Meter"
+  actions:{
+    toggleComments(){
+      this.toggleProperty('showComments');
+    }
+  }
 });

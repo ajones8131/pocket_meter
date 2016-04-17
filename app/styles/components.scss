@@ -1,0 +1,18 @@
+.commentsFlyout{
+  float: right;
+  width: 400px;
+  height: 100vh;
+  z-index: 200;
+  position: relative;
+  background-color: #FDFDFD;
+  button{
+    height: 40px;
+    margin-left: 5%;
+    width:90%;
+  }
+}
+.modal-backdrop{
+  width: 100%;
+  z-index: 150;
+  background-color: rgba(0, 0, 0, .7);
+}

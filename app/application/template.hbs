@@ -1,9 +1,14 @@
+<!-- app/application/template.hbs -->
 <header>
   <div class = "page-container">
     <nav>
-      <a>Home</a>
-      <a>Problem</a>
-      <button class = "comment">Comments</button>
+      {{#link-to "home"}}Home{{/link-to}}
+      {{#link-to "problem"}}Problem{{/link-to}}
+      <a>Placeholder</a>
+      <a>Placeholder</a>
+      <a>Placeholder</a>
+      {{#link-to "comment"}}Comments{{/link-to}}
+
     </nav>
   </div>
 </header>
