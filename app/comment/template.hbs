@@ -2,7 +2,7 @@
 
 <div class = "modal-body">
   <br><br>
-
+<button {{action 'createComment'}}>+++++</button>
   {{#each model.comments as |comment|}}
     {{comment.username}}: {{comment.description}}<br>
   {{else}}
@@ -10,4 +10,7 @@
       <p> there are no comments to display </p>
     </div>
   {{/each}}
+
+  <!-- {{likes}} -->
+
 </div>

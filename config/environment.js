@@ -25,6 +25,9 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV['ember-cli-mirage'] = {
+      enabled: false
+    }
   }
 
   if (environment === 'test') {
@@ -37,11 +40,20 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
+    ENV['ember-cli-mirage'] = {
+      enabled: false
+    }
   }
 
+  ENV.remote_couch = 'http://localhost:5984/pocket_meter_db';
+  ENV.local_couch = 'pocket_meter_db';
   if (environment === 'production') {
-
+    ENV.baseURL = '/';
+    ENV.remote_couch = '';
   }
+  ENV.contentSecurityPolicy = {
+    'connect-src': "'self' " + ENV.remote_couch.substring(0, ENV.remote_couch.indexOf('/', 9))
+  };
 
   return ENV;
 };
