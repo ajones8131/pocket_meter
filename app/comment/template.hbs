@@ -1,10 +1,10 @@
 <!-- app/comment/template.hbs -->
 
-<div class = "modal-body">
-  <br><br>
+<div class = "comments-body">
+  <br><br><br>
 <button {{action 'createComment'}}>+++++</button>
   {{#each model.comments as |comment|}}
-    {{comment.username}}: {{comment.description}}<br>
+    {{comment.username}}: {{comment.description}}: {{comment.rating}}<br>
   {{else}}
     <div class = "no-comments">
       <p> there are no comments to display </p>

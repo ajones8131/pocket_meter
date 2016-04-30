@@ -8,9 +8,24 @@
       <a>Placeholder</a>
       <a>Placeholder</a>
       {{#link-to "comment" class="comment-button"}}Comments{{/link-to}}
-      <a {{action 'createComment'}}>+</a>
+      <a {{action 'toggleComments'}}>+</a>
 
     </nav>
   </div>
 </header>
 {{outlet}}
+
+{{#each model.comments as |comment|}}
+  {{comment.username}}: {{comment.description}}: {{comment.rating}}<br>
+{{else}}
+  <div class = "no-comments">
+    <p> there are no comments to display </p>
+  </div>
+{{/each}}
+
+{{#if showComments}}
+  {{#liquid-wormhole}}
+    {{add-comment close="toggleComments" post="createComment"}}
+    <a {{action 'toggleComments'}}>close everything</a>
+  {{/liquid-wormhole}}
+{{/if}}

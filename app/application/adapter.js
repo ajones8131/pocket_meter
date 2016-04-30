@@ -16,7 +16,7 @@ export default Adapter.extend({
   db: db,
 
   unloadedDocumentChanged: function(obj) {
-    var appController = getOwner(this).lookup("controller:application");
+    // var appController = getOwner(this).lookup("controller:application");
     // appController.send('kickSpin');
 
     let store = this.get('store');

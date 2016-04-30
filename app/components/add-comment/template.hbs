@@ -1,1 +1,17 @@
-{{yield}}
+<div class = "all">
+<div class = "main">
+  <!-- <h6>Create Comment</h6> -->
+  <h5>Rate Project: </h5>
+  <button {{action 'setRating' 1}}>1</button>
+  <button {{action 'setRating' 2}}>2</button>
+  <button {{action 'setRating' 3}}>3</button>
+  <button {{action 'setRating' 4}}>4</button>
+  <button {{action 'setRating' 5}}>5</button>
+  {{input type="text" class="usernameBox" value=usernameText}}
+  {{textarea value=commentText}}
+<button {{action 'close'}}>Cancel</button>
+<button {{action 'post'}}>Okay</button>
+<p class = "remaining-chars">250</p>
+{{input type="text" id="ratingBox" value=rating}}
+</div>
+</div>
