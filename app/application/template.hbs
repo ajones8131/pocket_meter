@@ -7,25 +7,23 @@
       <a>Placeholder</a>
       <a>Placeholder</a>
       <a>Placeholder</a>
-      {{#link-to "comment" class="comment-button"}}Comments{{/link-to}}
-      <a {{action 'toggleComments'}}>+</a>
+      <button {{action 'toggleShowComments'}}>Comments</button>
+      <button {{action 'toggleAddComment'}}>+</button>
 
     </nav>
   </div>
 </header>
 {{outlet}}
 
-{{#each model.comments as |comment|}}
-  {{comment.username}}: {{comment.description}}: {{comment.rating}}<br>
-{{else}}
-  <div class = "no-comments">
-    <p> there are no comments to display </p>
-  </div>
-{{/each}}
 
 {{#if showComments}}
   {{#liquid-wormhole}}
-    {{add-comment close="toggleComments" post="createComment"}}
-    <a {{action 'toggleComments'}}>close everything</a>
+    {{comments-box comments=model.comments}}
+  {{/liquid-wormhole}}
+{{/if}}
+
+{{#if addComment}}
+  {{#liquid-wormhole}}
+    {{add-comment close="toggleAddComment"}}
   {{/liquid-wormhole}}
 {{/if}}

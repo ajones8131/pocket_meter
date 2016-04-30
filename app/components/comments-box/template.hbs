@@ -1,0 +1,9 @@
+<div class="all">
+  <div class = "main">
+    {{#each comments as |comment|}}
+      {{comments-box/single-comment comment=comment}}<br> <br>
+      {{else}}
+      <p>Be the first to leave a comment</p>
+    {{/each}}
+  </div>
+</div>

@@ -2,7 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   actions:{
-    toggleComments(){
+    toggleAddComment(){
+      this.toggleProperty('addComment');
+    },
+    toggleShowComments(){
       this.toggleProperty('showComments');
     },
     createComment(){
