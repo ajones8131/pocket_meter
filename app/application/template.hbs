@@ -1,20 +1,21 @@
 <!-- app/application/template.hbs -->
-<header>
-  <div class = "page-container">
-    <nav>
-      {{#link-to "home"}}Home{{/link-to}}
-      {{#link-to "problem"}}Problem{{/link-to}}
-      <a>Placeholder</a>
-      <a>Placeholder</a>
-      <a>Placeholder</a>
-      <button {{action 'toggleShowComments'}}>Comments</button>
-      <button {{action 'toggleAddComment'}}>+</button>
-
-    </nav>
+<div class = "page-container">
+  <div class = "sidebar">
+      <h1 class = "nav">Pocket Meter</h1>
+    <ul class = "nav">
+      <li>{{#link-to "home" class="nav nav-link current"}}Home{{/link-to}}</li>
+      <li>{{#link-to "problem" class="nav nav-link"}}Problem{{/link-to}}</li>
+      <li>{{#link-to "problem" class="nav nav-link"}}PlaceHolder{{/link-to}}</li>
+      <li>{{#link-to "problem" class="nav nav-link"}}PlaceHolder{{/link-to}}</li>
+      <li>{{#link-to "problem" class="nav nav-link"}}PlaceHolder{{/link-to}}</li>
+      <li><button class="button showCommentButton"{{action 'toggleShowComments'}}>Comments</button>
+      <button class="button addCommentButton"{{action 'toggleAddComment'}}>+</button></li>
+    </ul>
   </div>
-</header>
-{{outlet}}
 
+    {{outlet}}
+
+</div>
 
 {{#if showComments}}
   {{#liquid-wormhole}}
