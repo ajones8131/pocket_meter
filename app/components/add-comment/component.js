@@ -18,7 +18,7 @@ export default Ember.Component.extend({
         document.getElementById('commentArea').style.borderColor="red";
         error = 1;
       }
-      if(ratingNum == 0){
+      if(ratingNum === 0){
         document.getElementById('errorText').innerHTML="Please give us a rating";
         error = 1;
       }

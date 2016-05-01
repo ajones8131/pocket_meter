@@ -1,6 +1,5 @@
 $link-color: #81af90;
-$nav-color: #7FDBFF;
-$link-text-color: #669876;
+$link-text-color: #4682B4;
 
 *{
   // font-size: 100%;
@@ -10,11 +9,14 @@ $link-text-color: #669876;
   -moz-user-select: none;
   -ms-user-select:none;
   user-select:none;
+  color: #5f5a5a;
 }
+
 .nav{
   background-color: $nav-color;
-  color: #4682B4;
+  color: $link-text-color;
 }
+
 a{
   text-decoration: none;
   padding: 14px 25px;
@@ -75,9 +77,9 @@ button{
   margin-left: -50px;
   display: inline-block;
   width: 100%;
-  border-top: 1px solid #4682B4;
+  border-top: 1px solid $link-text-color;
   margin-top: -1px;
-  border-bottom: 1px solid #4682B4;
+  border-bottom: 1px solid $link-text-color;
   &.current{
     background-color: #FDFAF9;
   }
@@ -86,9 +88,12 @@ button{
 
 
 h1 {
+  padding: 5px 0px;
+  font-weight: 200;
+  color: #000000;
+}
+.nav.title{
   padding: 20px;
-
-  &.nav{
-    margin-left: 14%;
-  }
+  margin:auto;
+  width:200px;
 }

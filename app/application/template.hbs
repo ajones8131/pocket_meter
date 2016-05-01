@@ -1,20 +1,20 @@
 <!-- app/application/template.hbs -->
 <div class = "page-container">
   <div class = "sidebar">
-      <h1 class = "nav">Pocket Meter</h1>
+      <h1 class = "nav title">Pocket Meter</h1>
     <ul class = "nav">
-      <li>{{#link-to "home" class="nav nav-link current"}}Home{{/link-to}}</li>
-      <li>{{#link-to "problem" class="nav nav-link"}}Problem{{/link-to}}</li>
+      <li >{{#link-to "home" class="nav nav-link current"}}Home{{/link-to}}</li>
+      <li>{{#link-to "problem" class="nav nav-link" action='makeCurrent'}}Problem{{/link-to}}</li>
       <li>{{#link-to "problem" class="nav nav-link"}}PlaceHolder{{/link-to}}</li>
       <li>{{#link-to "problem" class="nav nav-link"}}PlaceHolder{{/link-to}}</li>
       <li>{{#link-to "problem" class="nav nav-link"}}PlaceHolder{{/link-to}}</li>
-      <li><button class="button showCommentButton"{{action 'toggleShowComments'}}>Comments</button>
+      <li class = "nav"><button class="button showCommentButton"{{action 'toggleShowComments'}}>Comments</button>
       <button class="button addCommentButton"{{action 'toggleAddComment'}}>+</button></li>
     </ul>
   </div>
-
-    {{outlet}}
-
+  <div calss="main-content">
+      {{outlet}}
+  </div>
 </div>
 
 {{#if showComments}}
