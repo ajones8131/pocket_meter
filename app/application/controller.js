@@ -2,11 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   actions:{
-    toggleAddComment(){
-      this.toggleProperty('addComment');
-    },
-    toggleShowComments(){
-      this.toggleProperty('showComments');
+    toggleSidebar(){
+      this.toggleProperty('hideSidebar');
     },
     createComment(){
       //create and set fields

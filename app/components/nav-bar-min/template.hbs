@@ -1,0 +1,49 @@
+<h1 class = "nav nav-min title"></h1>
+
+<ul class = "nav nav-min">
+  <li>
+    {{#link-to "home" class="nav nav-min nav-link" id="nav-link"}}
+      <span class="glyphicon glyphicon-home"></span>
+    {{/link-to}}
+  </li>
+  <li>
+    {{#link-to "problem" class="nav nav-min nav-link" id="nav-link"}}
+      <span class="glyphicon glyphicon-pencil"></span>
+    {{/link-to}}
+  </li>
+  <li>
+    {{#link-to "problem" class="nav nav-min nav-link" id="nav-link"}}
+      <span class="glyphicon glyphicon-education"></span>
+    {{/link-to}}
+  </li>
+  <li>
+    {{#link-to "problem" class="nav nav-min nav-link" id="nav-link"}}
+    <span class="glyphicon glyphicon-oil"></span>
+    {{/link-to}}
+  </li>
+  <li>
+    {{#link-to "problem" class="nav nav-min nav-link" id="nav-link"}}
+    <span class="glyphicon glyphicon-option-horizontal"></span>
+    {{/link-to}}
+  </li>
+  <li class = "nav nav-min">
+    <button class="button nav-min showCommentButton"{{action 'toggleShowComments'}}>
+      <span class="glyphicon glyphicon-comment glyph-button"></span>
+    </button>
+    <button class="button nav-min addCommentButton"{{action 'toggleAddComment'}}>
+      <span class="glyphicon glyphicon-plus glyph-button"></span>
+    </button>
+</li>
+</ul>
+
+{{#if showComments}}
+  {{#liquid-wormhole}}
+    {{comments-box comments=comments}}
+  {{/liquid-wormhole}}
+{{/if}}
+
+{{#if addComment}}
+  {{#liquid-wormhole}}
+    {{add-comment close="toggleAddComment"}}
+  {{/liquid-wormhole}}
+{{/if}}

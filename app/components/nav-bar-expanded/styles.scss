@@ -1,0 +1,33 @@
+.nav{
+  background-color: $nav-color;
+  color: $link-text-color;
+}
+
+.sidebar.sidebar-expanded{
+  position: fixed;
+  float: left;
+  height: 100vh;
+  width: $sidebar-expanded-width;
+  background-color: $nav-color;
+  display: block;
+}
+
+.nav.nav-expanded{
+  width: $sidebar-expanded-width - $slider-width;
+  float: left;
+  &.nav-link{
+    display: inline-block;
+    width: 100%;
+    border-top: 1px solid $link-text-color;
+    margin-top: -1px;
+    border-bottom: 1px solid $link-text-color;
+  }
+}
+
+
+
+.nav.title{
+  padding: 20px 0px 20px 20px;
+  margin:auto;
+  width:250px;
+}

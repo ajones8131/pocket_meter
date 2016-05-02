@@ -1,0 +1,65 @@
+<div class="sidebar sidebar-expanded">
+  <div class="nav nav-expanded">
+<h1 class = "nav nav-expanded title">Pocket Meter</h1>
+
+<ul class = "nav nav-expanded">
+  <li>
+    {{#link-to "home" class="nav nav-expanded nav-link"}}
+      <span class="glyphicon glyphicon-home"></span>
+      Home
+    {{/link-to}}
+  </li>
+  <li>
+    {{#link-to "problem" class="nav nav-expanded nav-link"}}
+      <span class="glyphicon glyphicon-pencil"></span>
+      Problem
+    {{/link-to}}
+  </li>
+  <li>
+    {{#link-to "problem" class="nav nav-expanded nav-link"}}
+      <span class="glyphicon glyphicon-education"></span>
+      Theory
+    {{/link-to}}
+  </li>
+  <li>
+    {{#link-to "problem" class="nav nav-expanded nav-link"}}
+    <span class="glyphicon glyphicon-oil"></span>
+    Build
+    {{/link-to}}
+  </li>
+  <li>
+    {{#link-to "problem" class="nav nav-expanded nav-link"}}
+    <span class="glyphicon glyphicon-option-horizontal"></span>
+    Other
+    {{/link-to}}
+  </li>
+  <li class = "nav nav-expanded">
+    <button class="button showCommentButton"{{action 'toggleShowComments'}}>
+      <span class="glyphicon glyphicon-comment glyph-button"></span>
+      Comments
+    </button>
+    <button class="button addCommentButton"{{action 'toggleAddComment'}}>
+      <span class="glyphicon glyphicon-plus glyph-button"></span>
+    </button>
+</li>
+</ul>
+</div>
+<div class="slider">
+<button class="slider-button">
+<span class="glyphicon glyphicon-triangle-left glyph-button"></span>
+</button>
+</div>
+
+
+</div>
+{{#if showComments}}
+  {{#liquid-wormhole}}
+    {{comments-box comments=comments}}
+  {{/liquid-wormhole}}
+{{/if}}
+
+{{#if addComment}}
+  {{#liquid-wormhole}}
+    {{add-comment close="toggleAddComment"}}
+  {{/liquid-wormhole}}
+{{/if}}
