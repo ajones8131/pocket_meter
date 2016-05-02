@@ -2,7 +2,6 @@
   "name": "pocket-meter",
   "version": "0.0.0",
   "description": "Small description for pocket-meter goes here",
-  "private": true,
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -14,7 +13,8 @@
   },
   "repository": "",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": "5.10.1",
+    "npm" : "3.8.3"
   },
   "author": "",
   "license": "MIT",
