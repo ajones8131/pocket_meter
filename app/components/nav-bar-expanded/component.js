@@ -9,6 +9,9 @@ export default Ember.Component.extend({
     },
     toggleShowComments(){
       this.toggleProperty('showComments');
+    },
+    minimize(){
+      this.sendAction('minimize');
     }
 
   }

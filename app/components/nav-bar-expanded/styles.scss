@@ -5,11 +5,12 @@
 
 .sidebar.sidebar-expanded{
   position: fixed;
-  float: left;
+  // float: left;
   height: 100vh;
   width: $sidebar-expanded-width;
   background-color: $nav-color;
   display: block;
+  z-index: 1000;
 }
 
 .nav.nav-expanded{
@@ -26,7 +27,7 @@
 
 
 
-.nav.title{
+.nav.nav-expanded.title{
   padding: 20px 0px 20px 20px;
   margin:auto;
   width:250px;
