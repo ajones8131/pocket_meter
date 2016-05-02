@@ -1,9 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  sidebarClass: "sidebar-expanded",
   actions:{
     toggleSidebar(){
       this.toggleProperty('hideSidebar');
+      if(sidebarClass ==="sidebar-expanded"){
+        sidebarClass = "sidebar-min";
+      } else{
+        sidebarClass = "sidebar-expanded";
+      }
     },
     createComment(){
       //create and set fields

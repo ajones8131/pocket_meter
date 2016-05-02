@@ -25,10 +25,46 @@
   }
 }
 
-
-
 .nav.nav-expanded.title{
   padding: 20px 0px 20px 20px;
   margin:auto;
   width:250px;
+}
+
+.add-comment-expaned, .show-comment-expanded{
+  height: 42px;
+  padding: 0px;
+  border-radius: 0px;
+  border: none;
+  margin-top: -1px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  background-color: $nav-color;
+  margin-left: -5px;
+  &:hover, &:active{
+    background-color: $nav-color-dark;
+  }
+  &:link, &:visited{
+    background-color: $nav-color;
+  }
+}
+
+
+.show-comment-expanded{
+  width: 135px;
+  float: left;
+}
+
+.add-comment-expaned{
+  width: 160px;
+  float:left;
+}
+
+.nav-link{
+  &:hover, &:active{
+    background-color: $nav-color-dark;
+  }
+  &:link, &:visited{
+    background-color: $nav-color;
+  }
 }

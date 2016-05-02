@@ -17,12 +17,9 @@ $link-text-color: #FDFAF9;
 a{
   text-decoration: none;
   padding: 14px 25px;
+  height: 42px;
   &:link, &:visited{
     background-color: $nav-color;
-    color: $nav-color;
-  }
-  &:hover, &:active {
-    background-color: $link-text-color;
     color: $nav-color;
   }
 }
@@ -52,26 +49,6 @@ input, textarea{
     box-shadow: 0px 0px 0px 2px #63B0E7
   }
 }
-
-button{
-  background-color: #6cB782;
-  border: 1px solid #71AC83;
-  border-radius: 3px;
-  font-size: 15px;
-  color: white;
-  padding: 8px 18px;
-  cursor: pointer;
-  outline: none !important;
-  &:hover{
-    background-color: #64A677;
-  }
-  &.link-button{
-    width: 100%;
-    float: left;
-  }
-}
-
-
 
 h1 {
   padding: 5px 0px;

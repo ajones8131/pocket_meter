@@ -1,6 +1,6 @@
 <div class="sidebar sidebar-min">
   <div class="nav nav-min">
-<h1 class = "nav nav-min title">Pocket Meter</h1>
+<h1 class = "nav nav-min title"></h1>
 
 <ul class = "nav nav-min">
   <li>
@@ -29,10 +29,12 @@
     {{/link-to}}
   </li>
   <li class = "nav nav-min">
-    <button class="button showCommentButton"{{action 'toggleShowComments'}}>
+    <button class="button nav-min-button"{{action 'toggleShowComments'}}>
       <span class="glyphicon glyphicon-comment glyph-button"></span>
     </button>
-    <button class="button addCommentButton"{{action 'toggleAddComment'}}>
+  </li>
+  <li class = "nav nav-min">
+    <button class="button nav-min-button"{{action 'toggleAddComment'}}>
       <span class="glyphicon glyphicon-plus glyph-button"></span>
     </button>
 </li>

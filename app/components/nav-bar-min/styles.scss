@@ -31,4 +31,32 @@
   padding: 0;
   margin:auto;
   width:40px;
+  height: 79px;
+}
+
+.nav-min-button{
+  height: 42px;
+  width: $sidebar-min-width - $slider-width;
+  margin-top: -1px;
+  padding: 8px 0px 8px 13px;
+  background-color: $nav-color;
+  border: none;
+  border-radius: 0px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  &:hover, &:active{
+    background-color: $nav-color-dark;
+  }
+  &:link, &:visited{
+    background-color: $nav-color;
+  }
+}
+
+.nav-link{
+  &:hover, &:active{
+    background-color: $nav-color-dark;
+  }
+  &:link, &:visited{
+    background-color: $nav-color;
+  }
 }
