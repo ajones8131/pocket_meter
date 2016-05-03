@@ -61,10 +61,10 @@
 }
 
 .nav-link{
-  &:hover, &:active{
-    background-color: $nav-color-dark;
-  }
   &:link, &:visited{
     background-color: $nav-color;
+  }
+  &:hover, &:active{
+    background-color: $nav-color-dark;
   }
 }

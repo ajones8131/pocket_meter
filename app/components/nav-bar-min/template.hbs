@@ -46,11 +46,10 @@
 </button>
 </div>
 
-
 </div>
 {{#if showComments}}
   {{#liquid-wormhole}}
-    {{comments-box comments=comments}}
+    {{comments-box comments=comments close="toggleShowComments"}}
   {{/liquid-wormhole}}
 {{/if}}
 

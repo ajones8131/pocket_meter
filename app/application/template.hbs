@@ -1,17 +1,10 @@
 <!-- app/application/template.hbs -->
-<div class = "page-container">
 
-  {{#if hideSidebar}}
-    {{nav-bar-min comments=model.comments expand="toggleSidebar"}}
-  {{else}}
-    {{nav-bar-expanded comments=model.comments minimize="toggleSidebar"}}
-  {{/if}}
 
 
   <div class="main-content" {{bind-attr class="sidebarClass"}}>
       {{outlet }}
   </div>
-</div>
 
 {{#if showComments}}
   {{#liquid-wormhole}}

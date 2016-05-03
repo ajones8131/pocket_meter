@@ -1,9 +1,14 @@
 <div class="all">
-  <div class = "main">
-    {{#each comments as |comment|}}
-      {{comments-box/single-comment comment=comment}}<br> <br>
-      {{else}}
-      <p>Be the first to leave a comment</p>
-    {{/each}}
+  <div class = "main-comment-box" {{action 'close'}}>
+    <div class="comment-box-close">
+      <span class="glyphicon glyphicon-remove"></span>
+    </div>
+    <div class = "panel-content">
+      {{#each comments as |comment|}}
+        {{comments-box/single-comment comment=comment}}<br> <br>
+        {{else}}
+        <p>Be the first to leave a comment</p>
+      {{/each}}
+  </div>
   </div>
 </div>
