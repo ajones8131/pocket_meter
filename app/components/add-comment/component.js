@@ -1,8 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  commentText: '',
+  remainingChars: Ember.computed('commentText', function() {
+    return 250 - this.get('commentText').length;
+  }),
+  noCharsLeft: Ember.computed('remainingChars', function() {
+    return(this.get('remainingChars') < 0);
+  }),
   store:Ember.inject.service(),
-
   actions:{
     close: function(){
       this.sendAction('close');
@@ -13,12 +19,12 @@ export default Ember.Component.extend({
       var ratingNum = document.ratingForm.rating.value;
       var error = 0;
 
-      if(text == null){
+      if((text == null) || this.get('noCharsLeft')){
         document.getElementById('commentArea').style.backgroundColor="#ffe7e4";
         document.getElementById('commentArea').style.borderColor="red";
         error = 1;
       }
-      if(ratingNum === 0){
+      if(ratingNum == 0){
         document.getElementById('errorText').innerHTML="Please give us a rating";
         error = 1;
       }

@@ -1,3 +1,18 @@
-<div class="comment">
-    {{comment.username}}: {{comment.description}}: {{comment.rating}}
+<div class="comment-div">
+  <span class="comment-username">
+      {{comment.username}}
+  </span>
+
+  <span class="comment-rating">
+      {{comment.rating}}/5
+  </span>
+
+  <span class="comment-rating">
+      {{moment-from-now comment.timestamp}}
+  </span>
+</div>
+<div class="comment-div">
+  <span class="comment-description">
+      {{comment.description}}
+  </span>
 </div>

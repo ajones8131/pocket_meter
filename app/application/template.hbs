@@ -2,24 +2,12 @@
 <div class = "page-container">
 
   {{#if hideSidebar}}
-    {{nav-bar-min comments=model.comments expand="toggleSidebar"}}
+    {{nav-bar-min comments=sortedComments expand="toggleSidebar"}}
   {{else}}
-    {{nav-bar-expanded comments=model.comments minimize="toggleSidebar"}}
+    {{nav-bar-expanded comments=sortedComments minimize="toggleSidebar"}}
   {{/if}}
 
   <div class={{if hideSidebar 'minimized' 'expanded'}}>
-      {{outlet }}
+      {{outlet}}
   </div>
 </div>
-
-{{#if showComments}}
-  {{#liquid-wormhole}}
-    {{comments-box comments=model.comments}}
-  {{/liquid-wormhole}}
-{{/if}}
-
-{{#if addComment}}
-  {{#liquid-wormhole}}
-    {{add-comment close="toggleAddComment"}}
-  {{/liquid-wormhole}}
-{{/if}}

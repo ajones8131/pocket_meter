@@ -1,7 +1,10 @@
-<div class="all">
-  <div class = "main">
+<div class="comments-all">
+  <div class = "comments-main">
     {{#each comments as |comment|}}
-      {{comments-box/single-comment comment=comment}}<br> <br>
+      <div class="comments-single">
+        {{comments-box/single-comment comment=comment}}
+      </div>
+
       {{else}}
       <p>Be the first to leave a comment</p>
     {{/each}}

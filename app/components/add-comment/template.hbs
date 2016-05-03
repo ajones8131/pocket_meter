@@ -13,6 +13,6 @@
   <button class="button okay-button"{{action 'post'}}>Okay</button>
   <button class="button close-button"{{action 'close'}}>Cancel</button>
 
-<p class = "remaining-chars">250</p>
+<p class = "remaining-chars {{if noCharsLeft 'text-overflow'}}">{{remainingChars}}</p>
 </div>
 </div>
