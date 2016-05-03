@@ -7,8 +7,7 @@
     {{nav-bar-expanded comments=model.comments minimize="toggleSidebar"}}
   {{/if}}
 
-
-  <div class="main-content" {{bind-attr class="sidebarClass"}}>
+  <div class={{if hideSidebar 'minimized' 'expanded'}}>
       {{outlet }}
   </div>
 </div>

@@ -22,16 +22,6 @@ html{
   top:0;bottom: 0;
 
 }
-.slider-button{
-  padding: 0px;
-  margin: 0px;
-  width: $slider-width;
-  height: 100%;
-  background-color: $nav-color;
-  border: none;
-  // border-left: 1px solid white;
-  border-radius: 0px;
-}
 
 
 .main-content{
@@ -41,6 +31,27 @@ html{
   padding:10px 30px;
 }
 
+.expanded{
+  width: calc(100% - 300px);
+  float: right;
+  top: 0; bottom: 0; right: 0;
+  padding:10px 30px;
+}
+
+.minimized{
+  width: calc(100% - 50px);
+  float: right;
+  top: 0; bottom: 0; right: 0;
+  padding:10px 30px;
+}
+
 .sidebar-min{
   width: calc(100% - 50px);
+}
+
+.logo{
+  margin-top: 7px;
+  width: 60px;
+  height: 60px;
+  float: left;
 }
