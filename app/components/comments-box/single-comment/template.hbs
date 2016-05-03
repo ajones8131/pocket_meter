@@ -1,4 +1,5 @@
 <div class="comment-div">
+  <div class="comment-div-top">
   <span class="comment-username">
       {{comment.username}}
   </span>
@@ -11,8 +12,7 @@
       {{moment-from-now comment.timestamp}}
   </span>
 </div>
-<div class="comment-div">
   <span class="comment-description">
-      {{comment.description}}
+      <p>{{comment.description}}</p>
   </span>
 </div>

@@ -19,7 +19,7 @@ export default Ember.Component.extend({
       var ratingNum = document.ratingForm.rating.value;
       var error = 0;
 
-      if((text == null) || this.get('noCharsLeft')){
+      if((text == '') || this.get('noCharsLeft')){
         document.getElementById('commentArea').style.backgroundColor="#ffe7e4";
         document.getElementById('commentArea').style.borderColor="red";
         error = 1;

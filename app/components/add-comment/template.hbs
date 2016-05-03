@@ -1,6 +1,9 @@
 <div class = "all">
 <div class = "main">
-  <h6>Create Comment</h6>
+  <div class="add-comment-top">
+    <h6>Create Comment</h6>
+</div>
+<div class="add-comment-main">
   <form id ="ratingForm" name="ratingForm">
 
   <!-- common partial for ratings html code -->
@@ -9,10 +12,11 @@
     {{input class="usernameBox" value=usernameText placeholder="Name"}}
     {{textarea id="commentArea" value=commentText placeholder="Type comment here!"}}
   </form>
-
+</div>
   <button class="button okay-button"{{action 'post'}}>Okay</button>
   <button class="button close-button"{{action 'close'}}>Cancel</button>
 
 <p class = "remaining-chars {{if noCharsLeft 'text-overflow'}}">{{remainingChars}}</p>
+
 </div>
 </div>

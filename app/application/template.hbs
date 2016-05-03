@@ -1,11 +1,12 @@
 <!-- app/application/template.hbs -->
 <div class = "page-container">
 
-  {{#if hideSidebar}}
-    {{nav-bar-min comments=sortedComments expand="toggleSidebar"}}
-  {{else}}
+  {{#liquid-if showSidebar}}
     {{nav-bar-expanded comments=sortedComments minimize="toggleSidebar"}}
-  {{/if}}
+  {{/liquid-if}}
+  {{#liquid-if hideSidebar}}
+    {{nav-bar-min comments=sortedComments expand="toggleSidebar"}}
+  {{/liquid-if}}
 
   <div class={{if hideSidebar 'minimized' 'expanded'}}>
       {{outlet}}

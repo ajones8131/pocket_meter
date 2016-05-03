@@ -56,7 +56,7 @@
 </div>
 {{#if showComments}}
   {{#liquid-wormhole}}
-    {{comments-box comments=comments}}
+    {{comments-box comments=comments addNewComment='toggleAddComment' close='toggleShowComments'}}
   {{/liquid-wormhole}}
 {{/if}}
 

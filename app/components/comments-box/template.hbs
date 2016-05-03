@@ -1,12 +1,23 @@
 <div class="comments-all">
   <div class = "comments-main">
-    {{#each comments as |comment|}}
-      <div class="comments-single">
-        {{comments-box/single-comment comment=comment}}
-      </div>
+    <div class = "comments-top-bar">
+      <button class="add-new-comment" {{action 'addNewComment'}}>
+        <span class="glyphicon glyphicon-plus"></span>
+        Add Comment
+      </button>
+      <button class="close-comments-box" {{action 'close'}}>
+        <span class="glyphicon glyphicon-remove"></span>
+      </button>
+    </div>
 
-      {{else}}
-      <p>Be the first to leave a comment</p>
-    {{/each}}
+    <div class="comments-main-content">
+      {{#each comments as |comment|}}
+        <div class="comments-single">
+          {{comments-box/single-comment comment=comment}}
+        </div>
+        {{else}}
+        <p>Be the first to leave a comment</p>
+      {{/each}}
+    </div>
   </div>
 </div>
