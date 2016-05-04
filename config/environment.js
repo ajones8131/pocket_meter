@@ -44,12 +44,12 @@ module.exports = function(environment) {
       enabled: false
     }
   }
-
+  //
   ENV.remote_couch = 'http://localhost:5984/pocket_meter_db';
   ENV.local_couch = 'pocket_meter_db';
   if (environment === 'production') {
     ENV.baseURL = '/';
-    ENV.remote_couch = '';
+    ENV.remote_couch = 'https://oundishavedlenestandomal:8afb7d44170457e75e12e1f71f33aca55da2b5e4@ajones8131.cloudant.com/pocket_meter_db';
   }
   ENV.contentSecurityPolicy = {
     'connect-src': "'self' " + ENV.remote_couch.substring(0, ENV.remote_couch.indexOf('/', 9))
