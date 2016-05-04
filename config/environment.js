@@ -49,7 +49,7 @@ module.exports = function(environment) {
   ENV.local_couch = 'pocket_meter_db';
   if (environment === 'production') {
     ENV.baseURL = '/';
-    ENV.remote_couch = 'https://oundishavedlenestandomal:8afb7d44170457e75e12e1f71f33aca55da2b5e4@ajones8131.cloudant.com/pocket_meter_db/_all_docs';
+    ENV.remote_couch = 'https://oundishavedlenestandomal:8afb7d44170457e75e12e1f71f33aca55da2b5e4@ajones8131.cloudant.com/pocket_meter_db';
   }
   ENV.contentSecurityPolicy = {
     'connect-src': "'self' " + ENV.remote_couch.substring(0, ENV.remote_couch.indexOf('/', 9))
