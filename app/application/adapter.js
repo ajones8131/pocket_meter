@@ -1,6 +1,5 @@
 // app/application/adapter.js
 
-import Ember from 'ember';
 import config from '../config/environment';
 import PouchDB from 'pouchdb';
 import { Adapter } from 'ember-pouch';
@@ -10,7 +9,7 @@ var remote = new PouchDB(config.remote_couch, {ajax: {timeout: 20000}});
 
 db.sync(remote, {live: true, retry: true});
 
-const { getOwner } = Ember;
+// const { getOwner } = Ember;
 
 export default Adapter.extend({
   db: db,

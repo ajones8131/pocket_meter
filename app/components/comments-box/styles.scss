@@ -1,4 +1,4 @@
-.comments-all{
+.comments-main{
   position: fixed;
   width: 100%;
   height: calc(100%);
@@ -6,7 +6,7 @@
   background-color: rgba(0,0,0,.5);
 }
 
-.comments-main{
+.flyout{
   width: 400px;
   height: 100%;
   float:right;

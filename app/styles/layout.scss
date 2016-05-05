@@ -4,6 +4,7 @@ $slider-width: 15px;
 $nav-color: #5f5a5a;
 $nav-color-dark: #474343;
 $nav-active-color: #4d4747;
+$nav-transition-duration: .5s;
 
 *{
   background-color: #FDFAF9;
@@ -36,6 +37,8 @@ html{
   float: right;
   top: 0; bottom: 0; right: 0;
   padding:10px 30px;
+  transition-property: width;
+  transition-duration: $nav-transition-duration;
 }
 
 .minimized{
@@ -43,6 +46,8 @@ html{
   float: right;
   top: 0; bottom: 0; right: 0;
   padding:10px 30px;
+  transition-property: width;
+  transition-duration: $nav-transition-duration;
 }
 
 .sidebar-min{

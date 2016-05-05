@@ -55,13 +55,13 @@
 
 </div>
 {{#if showComments}}
-  {{#liquid-wormhole}}
+  {{#liquid-wormhole to="flyout" index=1}}
     {{comments-box comments=comments addNewComment='toggleAddComment' close='toggleShowComments'}}
   {{/liquid-wormhole}}
 {{/if}}
 
 {{#if addComment}}
-  {{#liquid-wormhole}}
+  {{#liquid-wormhole to="flyout"}}
     {{add-comment close="toggleAddComment"}}
   {{/liquid-wormhole}}
 {{/if}}
