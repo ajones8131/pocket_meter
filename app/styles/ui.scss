@@ -25,6 +25,7 @@ ul {
   list-style-type: none;
   display: block;
 }
+
 li{
   width: 100%;
 }
@@ -84,10 +85,4 @@ button {
   &:hover, &:active{
     background-color: $nav-color-dark;
   }
-}
-
-
-.logo{
-  content: url(/assets/images/logo.png);
-  background-color: $nav-color;
 }

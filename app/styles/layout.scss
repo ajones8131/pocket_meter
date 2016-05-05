@@ -4,7 +4,7 @@ $slider-width: 15px;
 $nav-color: #5f5a5a;
 $nav-color-dark: #474343;
 $nav-active-color: #4d4747;
-$nav-transition-duration: .5s;
+$nav-transition-duration: 1s;
 
 *{
   background-color: #FDFAF9;
@@ -13,7 +13,7 @@ html{
   height: 100%;
   min-width: 920px;
   top: 0; bottom:0; left:0; right:0;
-  // margin: -8px auto auto -8px;
+  overflow-x: hidden;
 }
 
 .slider{
@@ -24,19 +24,11 @@ html{
 
 }
 
-
-.main-content{
-  width: calc(100% - 300px);
-  float: right;
-  top: 0; bottom: 0; right: 0;
-  padding:10px 30px;
-}
-
 .expanded{
   width: calc(100% - 300px);
   float: right;
   top: 0; bottom: 0; right: 0;
-  padding:10px 30px;
+  padding:20px 30px;
   transition-property: width;
   transition-duration: $nav-transition-duration;
 }
@@ -45,7 +37,7 @@ html{
   width: calc(100% - 50px);
   float: right;
   top: 0; bottom: 0; right: 0;
-  padding:10px 30px;
+  padding:20px 30px;
   transition-property: width;
   transition-duration: $nav-transition-duration;
 }
@@ -54,9 +46,9 @@ html{
   width: calc(100% - 50px);
 }
 
-.logo{
-  margin-top: 7px;
-  width: 60px;
-  height: 60px;
-  float: left;
+.pcb{
+  float:left;
+  &.top-text{
+    bottom-margin: 20px;
+  }
 }

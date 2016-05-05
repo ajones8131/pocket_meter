@@ -1,0 +1,57 @@
+<!-- app/theory/template.hbs -->
+<p>
+The Pocket Meter operates on fundamental electrical and computer engineering theory. All of
+the ideas and designs utilized here can be traced back to college level texts and other resources.
+For each of the three passive components, we addressed the questions of what kind of data the
+microcontroller could most easily read and manipulate as well as what circuits could produce this
+data with varied values determined by the device under test. Essentially the input to each circuit
+is an unknown resistor, inductor, or capacitor. The output is a measurable property which is then
+fed to the microcontroller.
+</p>
+<h4>
+Measuring Resistors:
+</h4>
+<p>
+Resistors are arguably the simplest of our three passive components in regards to how the
+equations governing them. Voltage is a quantity which is easily read by the microcontroller, so
+we elected to use a circuit where the output voltage is governed by out unknown resistor. This
+voltage divider produces an output voltage that is a fraction of the total circuit voltage. The
+output voltage is dependent upon the magnitude of the unknown resistance.
+</p>
+<h4>
+Measuring Inductors:
+</h4>
+<p>
+Inductors are significantly more tricky to measure. For our design, we elected to exploit
+the properties of a LC tank oscillator. When an inductor and capacitor are connected in parallel,
+an interesting phenomenon occurs as a result of their complementary impedances. When a
+voltage is applied to the “tank”, the capacitor charges as normal. However, when the voltage
+source is suddenly removed, the charge stored in the capacitor attempts to discharge through the
+inductor. As current builds through the inductor, it impedes the flow of charge and returns it to
+the capacitor. This process repeats continuously, producing an oscillatory effect. In an ideal
+circuit, this could continue indefinitely. Conversely, in practice the finite charge originally
+stored in the capacitor dissipates over time as a result of parasitic impedances. The result is an
+attenuating sinusoid with a frequency that is directly determined by the inductor and capacitor.
+Supposing we set the capacitor to a known value, inserting an unknown inductor would produce
+a characteristic frequency that is unique to that inductance value. In order to make the frequency
+of the sinusoid easier to measure with a microcontroller, we have converted it to digital data via a
+simple comparator.
+</p>
+<h4>
+Measuring Capacitors:
+</h4>
+<p>
+In order to measure our final component, we elected to use a somewhat niche circuit.
+The 555 timer operating in astable mode can be commonly found in DIY tutorials to create a
+square wave for clock signals, audio, and a wide variety of other purposes. The output frequency
+of this circuit is in fact directly proportional to the capacitor connected across pins 2/6 and 7.
+This is somewhat obvious when analyzing the operating of the circuit. The 555 timer waits for
+pin 6 to reach a certain ratio of the supply voltage (specifically 0.693). The external capacitor
+charges through both external resistors from the power supply, eventually reaching this specific
+voltage. When this condition is met, an internal flip flop opens pin 7 to and allows the capacitor
+to discharge through the lower of the two resistors. Pin 3 simply indicates the state of the flip
+flop and presents it as an output. The result of this configuration is a digital signal that is high
+when the capacitor is charging and low when it is discharging. The period of this wave is
+determined by the resistors and the capacitor. By selecting the resistor values, an unknown
+capacitor produces a unique period, much in the same way the inductor circuit does.
+</p>

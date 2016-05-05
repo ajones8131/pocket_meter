@@ -1,0 +1,56 @@
+.logo{
+  margin-top: 7px;
+  width: 60px;
+  height: 60px;
+  float: left;
+
+  content: url(/assets/images/logo.png);
+  background-color: $nav-color;
+}
+
+.schematic.schematic-full{
+  width: 70%;
+  height: auto;
+  margin: auto;
+  content: url(/assets/images/fullSchematic.png);
+}
+
+.pcb-no-case{
+  float: left;
+  width: 40%;
+  height: auto;
+  margin: 20px 5% 20px 5%;
+
+  &.pcb-all-layers{
+    content: url(/assets/images/pcbNoCase/allLayers.png);
+  }
+  &.silkscreen-layer{
+    content: url(/assets/images/pcbNoCase/silkscreenLayer.png);
+  }
+  &.top-layer{
+    content: url(/assets/images/pcbNoCase/topLayer.png);
+  }
+  &.bottom-layer{
+    content: url(/assets/images/pcbNoCase/bottomLayer.png);
+  }
+}
+
+.pcb-case{
+  float: left;
+  width: 30%;
+  height: auto;
+  margin: 20px 10% 20px 10%;
+
+  &.pcb-all-layers{
+    content: url(/assets/images/pcbCase/allLayers.png);
+  }
+  &.silkscreen-layer{
+    content: url(/assets/images/pcbCase/silkscreenLayer.png);
+  }
+  &.top-layer{
+    content: url(/assets/images/pcbCase/topLayer.png);
+  }
+  &.bottom-layer{
+    content: url(/assets/images/pcbCase/bottomLayer.png);
+  }
+}

@@ -14,17 +14,17 @@
     {{/link-to}}
   </li>
   <li>
-    {{#link-to "problem" class="nav nav-min nav-link"}}
+    {{#link-to "theory" class="nav nav-min nav-link"}}
       <span class="glyphicon glyphicon-education"></span>
     {{/link-to}}
   </li>
   <li>
-    {{#link-to "problem" class="nav nav-min nav-link"}}
+    {{#link-to "build" class="nav nav-min nav-link"}}
     <span class="glyphicon glyphicon-oil"></span>
     {{/link-to}}
   </li>
   <li>
-    {{#link-to "problem" class="nav nav-min nav-link"}}
+    {{#link-to "home" class="nav nav-min nav-link"}}
     <span class="glyphicon glyphicon-option-horizontal"></span>
     {{/link-to}}
   </li>
@@ -49,13 +49,13 @@
 
 </div>
 {{#if showComments}}
-  {{#liquid-wormhole to="flyout"}}
+  {{#liquid-wormhole to="flyout" index=1}}
     {{comments-box comments=comments addNewComment='toggleAddComment' close='toggleShowComments'}}
   {{/liquid-wormhole}}
 {{/if}}
 
 {{#if addComment}}
-  {{#liquid-wormhole to="flyout"}}
+  {{#liquid-wormhole to="flyout" index=1}}
     {{add-comment close="toggleAddComment"}}
   {{/liquid-wormhole}}
 {{/if}}
