@@ -8,6 +8,21 @@
   background-color: $nav-color;
 }
 
+// todo: add captions to images or fill out page with images
+.product{
+  float:left;
+  width: 50%;
+  margin: 50px 0px;
+  &.box-topdown{
+    content: url(/assets/images/product/Box_topdown.png);
+  }
+  &.board-topdown{
+    padding-top: 25px;
+    content: url(/assets/images/product/Board_topdownclose.png);
+  }
+
+}
+
 .schematic.schematic-full{
   width: 70%;
   height: auto;
@@ -19,7 +34,7 @@
   float: left;
   width: 40%;
   height: auto;
-  margin: 20px 5% 20px 5%;
+  margin: 20px 5%;
 
   &.pcb-all-layers{
     content: url(/assets/images/pcbNoCase/allLayers.png);
