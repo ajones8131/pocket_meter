@@ -2,14 +2,13 @@
 <div class = "page-container">
 
 <!-- todo: add liquid fire transistions to sidebar -->
-  {{#liquid-if showSidebar}}
-    {{nav-bar-expanded comments=sortedComments minimize="toggleSidebar"}}
-  {{/liquid-if}}
   {{#liquid-if hideSidebar}}
     {{nav-bar-min comments=sortedComments expand="toggleSidebar"}}
+  {{else}}
+    {{nav-bar-expanded comments=sortedComments minimize="toggleSidebar"}}
   {{/liquid-if}}
 
   <div class={{if hideSidebar 'minimized' 'expanded'}}>
-      {{outlet}}
+      {{liquid-outlet}}
   </div>
 </div>
