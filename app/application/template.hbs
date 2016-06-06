@@ -6,9 +6,9 @@
 
 <!-- todo: add liquid fire transistions to sidebar -->
   {{#liquid-if hideSidebar}}
-    {{nav-bar-min comments=sortedComments expand="toggleSidebar"}}
+    {{nav-bar-min comments=sortedComments expand="toggleSidebar" postNewComment="postNewComment"}}
   {{else}}
-    {{nav-bar-expanded comments=sortedComments minimize="toggleSidebar"}}
+    {{nav-bar-expanded comments=sortedComments minimize="toggleSidebar" postNewComment="postNewComment"}}
   {{/liquid-if}}
 
   <div class={{if hideSidebar 'minimized' 'expanded'}}>

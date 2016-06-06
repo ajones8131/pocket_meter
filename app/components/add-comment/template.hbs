@@ -9,8 +9,8 @@
   <!-- common partial for ratings html code -->
   {{radio-button-rating}}
     <p id="errorText"></p>
-    {{input class="usernameBox" value=usernameText placeholder="Name"}}
-    {{textarea id="commentArea" value=commentText placeholder="Type comment here!"}}
+    {{input class="usernameBox" name="usernameText" value=usernameText placeholder="Name"}}
+    {{textarea id="commentArea" name="commentText" value=commentText placeholder="Type comment here!"}}
   </form>
 </div>
   <button class="button okay-button"{{action 'post'}}>Okay</button>

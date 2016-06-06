@@ -30,12 +30,10 @@
     "ember-cli-htmlbars": "^1.0.3",
     "ember-cli-htmlbars-inline-precompile": "^0.3.1",
     "ember-cli-inject-live-reload": "^1.4.0",
-    "ember-cli-mirage": "0.1.13",
     "ember-cli-moment-shim": "1.1.0",
     "ember-cli-qunit": "^1.4.0",
     "ember-cli-release": "0.2.8",
     "ember-cli-sass": "5.3.1",
-    "ember-cli-slick": "1.0.14",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^1.2.0",
     "ember-component-css": "0.1.9",
@@ -45,12 +43,10 @@
     "ember-infinity": "0.2.3",
     "ember-load-initializers": "^0.5.1",
     "ember-moment": "6.1.0",
-    "ember-pouch": "3.2.0",
     "ember-radio-button": "1.0.7",
     "ember-resolver": "^2.0.3",
     "liquid-fire": "0.23.0",
     "liquid-tether": "1.0.0",
-    "loader.js": "^4.0.1",
-    "pouchdb": "5.3.2"
+    "loader.js": "^4.0.1"
   }
 }

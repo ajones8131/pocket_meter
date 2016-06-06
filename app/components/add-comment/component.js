@@ -14,22 +14,7 @@ export default Ember.Component.extend({
       this.sendAction('close');
     },
     post: function(){
-      var user = this.get('usernameText');
-      var text = this.get('commentText');
-      var ratingNum = document.ratingForm.rating.value;
-
-
-
-      //create new comment
-      var newComment = this.get('store').createRecord('comment', {
-        username: user,
-        description: text,
-        rating: ratingNum,
-        timestamp: new Date()
-      });
-
-      //Save the comment
-      newComment.save();
+      this.sendAction('post');
       this.sendAction('close');
     }
   }

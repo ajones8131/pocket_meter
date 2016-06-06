@@ -4,4 +4,5 @@ import DS from 'ember-data';
 
 export default DS.RESTAdapter.extend({
   host: 'http://pocket-meter-api.herokuapp.com'
+  // host: 'http://localhost:3000'
 });

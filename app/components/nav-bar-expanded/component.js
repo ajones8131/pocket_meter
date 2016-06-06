@@ -7,6 +7,9 @@ export default Ember.Component.extend({
     toggleAddComment(){
       this.toggleProperty('addComment');
     },
+    postNewComment(){
+      this.sendAction('postNewComment');
+    },
     toggleShowComments(){
       this.toggleProperty('showComments');
     },

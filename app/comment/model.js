@@ -1,11 +1,11 @@
+import Model from 'ember-data/model';
 import DS from 'ember-data';
-import { Model } from 'ember-pouch';
+import { belongsTo } from 'ember-data/relationships';
 
-var comment = Model.extend({
+export default Model.extend({
 	username: DS.attr('string'),
   description: DS.attr('string'),
   rating: DS.attr('number'),
-  timestamp: DS.attr('date')
+  timestamp: DS.attr('date'),
+	user: belongsTo('user')
 });
-
-export default comment;
